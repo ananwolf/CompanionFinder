@@ -9,6 +9,9 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
+const config = {
+  headers: { Authorization: `Bearer ${TOKEN}` },
+};
 
 let PORT = process.env.PORT || 1128;
 
