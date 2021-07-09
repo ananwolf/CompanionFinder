@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
 import { Button, Accordion, Card } from 'react-bootstrap';
-import parse from 'html-react-parser';
 
 const PetCard = ({ animals }) => {
   return (
-    <>
+    <div>
       {animals.map((animal) => (
         <div key={animal.id} className='card card-body mb-3'>
           <div className='row'>
@@ -97,7 +96,7 @@ const PetCard = ({ animals }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
