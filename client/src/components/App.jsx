@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import isValidZip from 'is-valid-zip';
-
+import Image from "react-bootstrap/Image";
 import Form from './Form.jsx';
 import PetCard from './PetCard.jsx';
 import Paginate from './Paginate.jsx';
@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div>
       <header className='bg-light text-center h-10 mb-4 p-3'>
-        Companion Finder
+        <Image src="https://i.imgur.com/kbqjhXW.png" alt="logo" fluid />
       </header>
       <div className='container'>
         <Form
