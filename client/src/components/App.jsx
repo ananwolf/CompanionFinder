@@ -17,19 +17,15 @@ const App = () => {
 
   const getAnimals = (event) => {
     event.preventDefault();
-    isValidZip(zip)
-    axios.post(``)
-      ? axios.get(`https://api.petfinder.com/v2/animals?type=${species}&location=${zip}`,
-        
-      )
-        .then(({ data }) => {
-          console.log('succesful fetch', data);
-          data.animals.length
-            ? setAnimals(data.animals.sort((a, b) => a.distance - b.distance))
-            : null;
-        })
-        .catch(err => console.log(err))
-      : null
+    isValidZip
+    ? axios.get('/animals', {params: { species: species, zip: zip }})
+      .then((response) => {
+        response.data.animals.length
+          ? setAnimals(response.data.animals.sort((a, b) => a.distance - b.distance))
+          : null;
+    })
+      .catch(err => console.log(err))
+    : null
   };
 
   return (
@@ -44,6 +40,7 @@ const App = () => {
           handleSpeciesChange={handleSpeciesChange}
         />
         <PetCard animals={animals} />
+        
       </div>
     </div>
   )

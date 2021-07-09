@@ -13,7 +13,8 @@ const Form = ({ getAnimals, handleZipChange, handleSpeciesChange }) => {
             <option value='select'>Select Your Species</option>
             <option value='Dog'>Dog</option>
             <option value='Cat'>Cat</option>
-            <option value='Bird'>Bird</option>
+            <option value='Rabbit'>Rabbit</option>
+            <option value='Horse'>Horse</option>
             <option value='Barnyard'>Barnyard</option>
           </select>
           <input
