@@ -39,3 +39,10 @@ for development enviroment
 - babel-loader 8.2.2
 - webpack 5.43.0
 - nodemon 2.0.10
+
+## Future implementations
+
+- dark theme
+- user login and save favorites
+- image Modal popup
+- bugfixes: description text is not rendering symbols
